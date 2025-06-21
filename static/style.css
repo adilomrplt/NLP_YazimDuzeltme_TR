@@ -1,0 +1,125 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #353535;
+}
+.header_text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.container{
+  max-width: 690px;
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.01);
+}
+.wrapper{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.wrapper .text-input{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.text-input .to-text{
+  border-radius: 0px;
+  border-left: 1px solid #ccc;
+}
+.header_group{
+  display: flex;
+  flex-direction: row;
+
+  text-align: center;
+}
+.label {
+  flex: 33%;
+  }
+
+.text-input textarea,label{
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.text-input label::placeholder{
+  color: #b7b6b6;
+}
+.text-input textarea::placeholder{
+  color: #b7b6b6;
+}
+
+.text-input textarea::-webkit-scrollbar, label::-webkit-scrollbar{
+  width: 4px;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb, label::-webkit-scrollbar-thumb{
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.container button{
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  background: #282e21;
+}
+
+@media (max-width: 660px){
+  .container{
+    padding: 20px;
+  }
+  .wrapper .text-input{
+    flex-direction: column;
+  }
+  .text-input .to-text{
+    border-left: 0px;
+    border-top: 1px solid #ccc;
+  }
+  .text-input textarea, label{
+    height: 200px;
+  }
+
+  .container button{
+    padding: 13px;
+    font-size: 16px;
+  }
+
+}
+
+.canli-oneri {
+  padding: 8px 16px;
+  background: #f9fbe7;
+  border-left: 4px solid #24b47e;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background 0.3s;
+}

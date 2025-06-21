@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Türkçe Yazım Denetleyici</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="header_text">
+        <h1>Türkçe Yazım Denetleyici</h1>
+    </div>
+    <div class="header_group">
+         <div class="label">Cümle Girişi</div>
+        <div class="label">Yanlış Kelimeler</div>
+        <div class="label">Düzeltilmiş Cümle</div>
+    </div>
+    <form action="/" method="post">
+        <div class="wrapper">
+        <div class="text-input">
+            <textarea name="metin" maxlength="200" spellcheck="false" id="metin" class="from-text" placeholder="Metin giriniz">{{mtn}}</textarea>
+            <label spellcheck="false" id="y_metin" class="to-text">
+                {%for mtn1 in h_metin%}
+                    {{mtn1}}
+                {%endfor%}
+            </label>
+            <label spellcheck="false" id="d_metin" class="to-text">
+                {%for mtn2 in d_metin%}
+                    {{mtn2}}
+                {%endfor%}
+            </label>
+        </div>
+        </div>
+        <button type="submit"  id="btn">Metni Düzelt</button>
+    </form>
+    <!-- Canlı öneri kutusu -->
+    <div class="canli-oneri" id="canli_oneri" style="display:none; margin:6px 0; color:#2a3a15; font-size:16px;"></div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
