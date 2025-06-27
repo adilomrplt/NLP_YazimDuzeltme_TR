@@ -73,10 +73,7 @@ Desktop.ini
 
 # PDF, images, and other large files
 *.pdf
-*.png
-*.jpg
-*.jpeg
-*.gif
+
 
 # Model checkpoints and weights
 *.pt
